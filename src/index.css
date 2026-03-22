@@ -8,15 +8,43 @@ body {
   letter-spacing: 0.03rem;
 }
 
-@media (max-width: 800px) {
-  .controlsContainer {
-    flex-direction: column;
-  }
+@keyframes fall {
+  from { top: 0%; }
+  to { top: 90%; }
+}
 
-  .fallingWordContainer {
-    height: 70vh;
+.animate-fall {
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@media (max-width: 800px) {
+  @keyframes fall-mobile {
+    from { top: 0%; }
+    to { top: 90%; }
   }
-  .gameOverMsgContainer {
-    width: 90%;
+  .animate-fall {
+    animation-name: fall-mobile;
   }
+}
+
+/* Game "Juice" Effects */
+@keyframes letter-pop {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.8); }
+  100% { filter: brightness(1); }
+}
+
+.animate-letter-pop {
+  display: inline-block;
+  animation: letter-pop 0.15s ease-out;
+}
+
+.bg-particle {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
 }
