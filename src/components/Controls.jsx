@@ -3,14 +3,13 @@ import { FiPlay, FiPause, FiRefreshCcw, FiSquare } from "react-icons/fi";
 
 const Controls = ({ inputVal, inputRef, paused, onInputChange, onRestart, onStop, onTogglePause }) => {
   return (
-    <div className="controlsContainer fixed bottom-4 left-1/2 transform -translate-x-1/2 flex items-center justify-center gap-4 z-50">
-      <div className="flex items-center gap-4 bg-white/90 p-1.5 rounded-2xl border border-slate-200 backdrop-blur-xl shadow-2xl h-[56px] ring-1 ring-black/5">
+    <div className="controlsContainer fixed bottom-4 left-1/2 transform -translate-x-1/2 flex items-center justify-center z-50 w-[calc(100%-2rem)] max-w-lg">
+      <div className="flex items-center gap-2 md:gap-4 bg-white/90 p-1.5 rounded-2xl border border-slate-200 backdrop-blur-xl shadow-2xl h-[56px] w-full ring-1 ring-black/5">
         {/* Input Field on the Left */}
-        <div className="relative group min-w-[280px] flex items-center">
+        <div className="relative group flex-1 min-w-0 md:min-w-[280px] flex items-center">
           <input ref={inputRef} type="text" value={inputVal} onChange={onInputChange} placeholder={paused ? "Paused" : "Type..."} disabled={paused}
-            className={`w-full bg-slate-50 border ${paused ? 'border-slate-100 opacity-50' : 'border-slate-200 focus:border-emerald-500/50'} text-slate-900 placeholder-slate-400 text-base py-1.5 px-5 rounded-xl outline-none transition-all duration-300 font-sans font-medium tracking-wide`}
+            className={`w-full bg-slate-50 border ${paused ? 'border-slate-100 opacity-50' : 'border-slate-200 focus:border-emerald-500/50'} text-slate-900 placeholder-slate-400 text-sm md:text-base py-1.5 px-3 md:px-5 rounded-xl outline-none transition-all duration-300 font-sans font-medium tracking-wide`}
           />
-          {!paused && <div className="absolute right-3 top-1/2 -translate-y-1/2 w-1 h-3 bg-emerald-500/40 rounded-full animate-pulse" />}
         </div>
 
         <div className="flex items-center gap-1.5 border-l border-slate-200 pl-3 mr-1">

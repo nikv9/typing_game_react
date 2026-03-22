@@ -1,14 +1,14 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import WordTyping from "./pages/WordTyping";
+import Game from "./pages/Game";
 
 const App = () => {
   return (
     <div className="app bg-[#151721]">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/word_typing" element={<WordTyping />} />
+        <Route path="/game" element={<Game />} />
       </Routes>
     </div>
   );

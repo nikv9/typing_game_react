@@ -11,7 +11,7 @@ const Header = ({ score, lives, timerOn, timeLeft, onToggleTimer, accuracy }) =>
           to="/"
           className="tracking-[0.3em] text-xl font-black bg-clip-text text-transparent bg-gradient-to-b from-slate-900 to-slate-600 uppercase  transition-all duration-300 whitespace-nowrap"
         >
-          Falling Clouds
+          Typing Keys
         </Link>
       </div>
 

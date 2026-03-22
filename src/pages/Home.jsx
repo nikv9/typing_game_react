@@ -9,11 +9,11 @@ const Home = () => {
       <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-indigo-400/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="z-10 text-center max-w-4xl mx-auto space-y-8">
-        <div className="space-y-4">
-          <h1 className="text-5xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-slate-900 to-slate-600 mb-2">
-            FALLING CLOUDS
+        <div className="space-y-4 flex flex-col items-center">
+          <h1 className="text-6xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-slate-900 to-slate-600 mb-4!">
+            TYPING KEYS
           </h1>
-          <div className="h-1 w-24 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto rounded-full" />
+          <div className="h-1 w-24 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full" />
         </div>
 
         <p className="text-lg md:text-2xl text-slate-600 font-medium max-w-2xl mx-auto leading-relaxed">
@@ -23,7 +23,7 @@ const Home = () => {
 
         <div className="pt-8">
           <Link
-            to="/word_typing"
+            to="/game"
             className="group relative inline-flex items-center justify-center px-12 py-6 overflow-hidden font-bold text-white transition-all duration-300 bg-emerald-600 rounded-3xl hover:bg-emerald-500 hover:scale-105 active:scale-95 shadow-[0_20px_60px_rgba(16,185,129,0.4)] ring-1 ring-white/30"
           >
             <span className="relative text-2xl tracking-widest uppercase font-black">
